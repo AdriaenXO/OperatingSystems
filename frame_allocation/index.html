@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Frame allocation for multiple processes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="content">
+      <h1>Frame allocation for multiple processes</h1>
+      <fieldset>
+        <legend>Process 1</legend>
+        <label for="input-data1">Input data:</label>
+        <textarea id="input-data1" name="input-data1">2,6,1,5,7,7,7,7,5,1,6,2,3,4,1,2,3</textarea>
+        <label for="generate-data-size1">Data size [1-1000]:</label>
+        <input type="number" min="1" max="1000" step="1" id="generate-data-size1" name="generate-data-size1" value="100"/>
+        <input type="button" name="randomize1" value="Generate" /><br/>
+      </fieldset>
+      <fieldset>
+        <legend>Process 2</legend>
+        <label for="input-data2">Input data:</label>
+        <textarea id="input-data2" name="input-data1">4,4,4,3,4,3,4,4,4,1,3,2,3,4,4,4,3,6,5,9,8,7,1,5,8,7,3</textarea>
+        <label for="generate-data-size2">Data size [1-1000]:</label>
+        <input type="number" min="1" max="1000" step="1" id="generate-data-size2" name="generate-data-size2" value="100"/>
+        <input type="button" name="randomize2" value="Generate" /><br/>
+      </fieldset>
+      <br/>
+      <div id="settings">
+      <label for="number-of-pages">Input number of pages:</label>
+      <input type="number" min="1" max="100" step="1" id="number-of-pages" name="number-of-pages" value="8"/><br />
+      <label for="number-of-frames">Input number of frames:</label>
+      <input type="number" min="1" max="100" step="1" id="number-of-frames" name="number-of-frames" value="10"/><br />
+      </div>
+      <div id="buttons">
+        <input type="button" name="Equal" value="Equal" />
+        <input type="button" name="Proportional" value="Proportional" />
+        <input type="button" name="Random" value="Random" />
+        <input type="button" name="WorkingSet" value="Working Set" />
+        <!--<input type="button" name="PageFaultFreq" value="Page Fault Frequency" />-->
+      </div>
+      <div id="output">
+        <h2></h2>
+        <p id="error-info"></p>
+        <div id="output-info"></div>
+      </div>
+    </div>
+    <script src="algorithms.js"></script>
+  </body>
+</html>

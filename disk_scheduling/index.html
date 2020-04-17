@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Disk scheduling algorithms</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chartist.css" />
+  </head>
+  <body>
+    <div id="content">
+      <h1>Disk scheduling algorithms</h1>
+      <label for="input-data">Input data:</label>
+      <textarea id="input-data" name="input-data">23/-1,89/-1,132/-1,42/-1,187/-1</textarea>
+      <!-- 101/-1,23/80,45/90,60/150,62/120,150/120 -->
+      <label for="generate-data-size">Data size [1-1000]:</label>
+      <input type="number" min="1" max="1000" step="1" id="generate-data-size" name="generate-data-size" value="100"/>
+      <input type="button" name="randomize" value="Generate" /><br/>
+      <label for="input-size">Input disk size [0-1000]:</label>
+      <input type="number" min="0" max="1000" step="1" id="input-size" name="input-size" value="200"/>
+      <label for="input-size">Input starting point:</label>
+      <input type="number" min="0" max="1000" step="1" id="starting-point" name="starting-point" value="100"/><br />
+      <div id="buttons">
+        <input type="button" name="FCFS" value="FCFS" />
+        <input type="button" name="SSTF" value="SSTF" />
+        <input type="button" name="SCAN" value="SCAN" />
+        <input type="button" name="C-SCAN" value="C-SCAN" />
+        <input type="button" name="EDF" value="EDF" />
+        <!--<input type="button" name="FD-SCAN" value="FD-SCAN" />-->
+      </div>
+      <div id="output">
+        <h2></h2>
+        <div id="output-movement"></div>
+      </div>
+      <div class="ct-chart"></div>
+    </div>
+    <script src="chartist.js"></script>
+    <script src="algorithms.js"></script>
+  </body>
+</html>

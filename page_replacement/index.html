@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Page replacement algorithms</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="content">
+      <h1>Page replacement algorithms</h1>
+      <label for="input-data">Input data:</label>
+      <textarea id="input-data" name="input-data">1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6</textarea>
+      <label for="generate-data-size">Data size [1-1000]:</label>
+      <input type="number" min="1" max="1000" step="1" id="generate-data-size" name="generate-data-size" value="100"/>
+      <input type="button" name="randomize" value="Generate" /><br/>
+      <label for="number-of-pages">Input number of pages:</label>
+      <input type="number" min="1" max="100" step="1" id="number-of-pages" name="number-of-pages" value="8"/><br />
+      <label for="number-of-frames">Input number of frames:</label>
+      <input type="number" min="1" max="100" step="1" id="number-of-frames" name="number-of-frames" value="4"/><br />
+      <div id="buttons">
+        <input type="button" name="FIFO" value="FIFO" />
+        <input type="button" name="OPT" value="OPT" />
+        <input type="button" name="LRU" value="LRU" />
+        <input type="button" name="ALRU" value="ALRU" />
+        <input type="button" name="RAND" value="RAND" />
+        <!--<input type="button" name="FD-SCAN" value="FD-SCAN" />-->
+      </div>
+      <div id="output">
+        <h2></h2>
+        <p id="error-info"></p>
+        <div id="output-info"></div>
+      </div>
+    </div>
+    <script src="algorithms.js"></script>
+  </body>
+</html>

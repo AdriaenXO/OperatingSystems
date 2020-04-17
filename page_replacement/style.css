@@ -1,0 +1,77 @@
+#content
+{
+  display: block;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.ok {
+  color: green;
+}
+
+table {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1, h2 {
+  color: #9e1806;s
+}
+
+textarea {
+  display: block;
+  clear: right;
+  margin: 0 auto;
+  width: 400px;
+  height: 200px;
+}
+
+input {
+  margin-top: 20px;
+}
+
+#error-info {
+    clear: both;
+}
+
+#output-info {
+    column-count: 3;
+}
+
+#buttons {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#buttons input[type=button] {
+  background-color: white;
+  border: 2px solid #9e1806;
+  color: #9e1806;
+  padding: 10px 24px;
+  cursor: pointer;
+  float: left;
+}
+
+#buttons input[type=button]:not(:last-child) {
+  border-right: none;
+}
+
+#buttons:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#buttons input[type=button]:hover {
+  background-color: #9e1806;
+  color: white;
+}
